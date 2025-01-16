@@ -17,8 +17,9 @@ sudo update-alternatives --install /usr/bin/llvm-config llvm-config /usr/bin/llv
 export PYTHON=/usr/bin/python
 ../qt-everywhere-src-5.15.16/configure -v -recheck-all -prefix /opt/dev/qt-5.15.16 \
 	-opensource -confirm-license -release \
-	-shared \
+	-shared -static \
 	-c++std c++17 \
+	-nomake examples \
 	-opengl -glib -gui -widgets \
 	-icu \
 	-no-ssl \
